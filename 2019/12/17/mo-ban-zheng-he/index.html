@@ -374,14 +374,14 @@ sta">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 				
@@ -488,7 +488,7 @@ for (int i = 1; i &lt;= n; i++)
 <pre><code>    for(int i=1;i&lt;=n;i++)
     {
         int x,y,s,t=1;
-        scanf("%d%d%d",&amp;x,&amp;y,&amp;s);
+        scanf(&quot;%d%d%d&quot;,&amp;x,&amp;y,&amp;s);
         while(s&gt;=t)
         {
             v[nl++]=x*t;c[nl]=y*t;
@@ -516,16 +516,16 @@ for (int i = 1; i &lt;= n; i++)
     int s = 0, f = 1;  
     char ch = getchar();  
     while(!isdigit(ch)) {  
-        if(ch == '-') f = -1;  
+        if(ch == &#39;-&#39;) f = -1;  
         ch = getchar();  
     }  
     while(isdigit(ch)) {  
-        s = s * 10 + ch - '0';  
+        s = s * 10 + ch - &#39;0&#39;;  
         ch = getchar();  
     }  
     return s * f;  
 }  </code></pre><ul>
-<li><p>$isdigit$函数头文件$<cctype>$</cctype></p>
+<li><p>$isdigit$函数头文件$<cctype>$</p>
 </li>
 <li><p>这里给出读入$int$类型时的模板，实际使用要根据数据范围改变函数类型</p>
 </li>
@@ -533,12 +533,12 @@ for (int i = 1; i &lt;= n; i++)
 <hr>
 <h3 id="快写同理"><a href="#快写同理" class="headerlink" title="快写同理"></a>快写同理</h3><pre><code>inline void write(int x) {  
     if(x &lt; 0) {  
-        putchar('-');  
+        putchar(&#39;-&#39;);  
         x = -x;  
     }  
     if(x &gt; 9)  
         write(x/10);  
-    putchar(x % 10 - '0');  
+    putchar(x % 10 - &#39;0&#39;);  
     return;  
 }</code></pre><hr>
 <ul>
@@ -582,25 +582,7 @@ for (int i = 1; i &lt;= n; i++)
             vis[v] = true, que.push(v);
         }
     }
-}</code></pre><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+}</code></pre>
             </div>
             <hr/>
 
@@ -1027,7 +1009,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">2.8k</span>&nbsp;字
             
             
             
