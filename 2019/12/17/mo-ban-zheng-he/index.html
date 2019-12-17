@@ -5,11 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="模板整合, Sagiri&#39;s blog">
-    <meta name="description" content="自己认为模板在算法竞赛中还是比较重要的.它能够帮助你快速的回忆起一种算法的框架但OI的题目千变万化，模板只能做个参考  
-
-
-$tarjan$算法求强联通分量int dfn[N], low[N], scc[M], color[N];
-sta">
+    <meta name="description" content="这是我整理的一些竞赛中常用的算法的模板">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +14,7 @@ sta">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>模板整合 | Sagiri</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/jpeg" href="/image/Izumi.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -41,7 +37,7 @@ sta">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/image/Izumi.jpg" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Sagiri</span>
                 </a>
@@ -139,7 +135,7 @@ sta">
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/image/Izumi.jpg" class="logo-img circle responsive-img">
         
         <div class="logo-name">Sagiri</div>
         <div class="logo-desc">
@@ -308,7 +304,7 @@ sta">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/image/1dd5a8dabcb601bd6ad5913c81e03385.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -323,10 +319,105 @@ sta">
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -400,7 +491,7 @@ sta">
                 <p>自己认为模板在算法竞赛中还是比较重要的.<br>它能够帮助你快速的回忆起一种算法的框架<br>但OI的题目千变万化，模板只能做个参考  </p>
 <hr>
 <hr>
-<h1 id="tarjan-算法"><a href="#tarjan-算法" class="headerlink" title="$tarjan$算法"></a>$tarjan$算法</h1><h3 id="求强联通分量"><a href="#求强联通分量" class="headerlink" title="求强联通分量"></a>求强联通分量</h3><pre><code>int dfn[N], low[N], scc[M], color[N];
+<h2 id="tarjan-算法"><a href="#tarjan-算法" class="headerlink" title="$tarjan$算法"></a>$tarjan$算法</h2><h3 id="求强联通分量"><a href="#求强联通分量" class="headerlink" title="求强联通分量"></a>求强联通分量</h3><pre><code>int dfn[N], low[N], scc[M], color[N];
 stack &lt;int&gt; sta;
 int time_cnt, scc_cnt;
 void tarjan(int u) {
@@ -422,8 +513,7 @@ void tarjan(int u) {
         } sta.pop();
     }
 }</code></pre><hr>
-<h1 id="DP-常用模板"><a href="#DP-常用模板" class="headerlink" title="$DP$常用模板"></a>$DP$常用模板</h1><hr>
-<h3 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h3><blockquote>
+<h2 id="DP-常用模板"><a href="#DP-常用模板" class="headerlink" title="$DP$常用模板"></a>$DP$常用模板</h2><h3 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h3><blockquote>
 <blockquote>
 <p>$01$背包问题：</p>
 </blockquote>
@@ -511,8 +601,9 @@ for (int i = 1; i &lt;= n; i++)
     if (l &gt; 0) b[i][2] = l + 1;
 }
 for (int i = 1; i &lt;= n; i++)
-    maxx = max(maxx, b[i][2]);</code></pre><h1 id="快读模板"><a href="#快读模板" class="headerlink" title="快读模板"></a>快读模板</h1><hr>
-<h3 id="快读实际上就是不断读入字符，而后转化数值处理，它要比-cin-和-scanf-快很多"><a href="#快读实际上就是不断读入字符，而后转化数值处理，它要比-cin-和-scanf-快很多" class="headerlink" title="快读实际上就是不断读入字符，而后转化数值处理，它要比$cin$和$scanf$快很多"></a>快读实际上就是不断读入字符，而后转化数值处理，它要比$cin$和$scanf$快很多</h3><pre><code>inline int read() {  
+    maxx = max(maxx, b[i][2]);</code></pre><h2 id="快读模板"><a href="#快读模板" class="headerlink" title="快读模板"></a>快读模板</h2><hr>
+<p>快读实际上就是不断读入字符，而后转化数值处理，它要比$cin$和$scanf$快很多  </p>
+<pre><code>inline int read() {  
     int s = 0, f = 1;  
     char ch = getchar();  
     while(!isdigit(ch)) {  
@@ -531,7 +622,8 @@ for (int i = 1; i &lt;= n; i++)
 </li>
 </ul>
 <hr>
-<h3 id="快写同理"><a href="#快写同理" class="headerlink" title="快写同理"></a>快写同理</h3><pre><code>inline void write(int x) {  
+<p>快写同理</p>
+<pre><code>inline void write(int x) {  
     if(x &lt; 0) {  
         putchar(&#39;-&#39;);  
         x = -x;  
@@ -544,7 +636,7 @@ for (int i = 1; i &lt;= n; i++)
 <ul>
 <li>注意 在$VS$中使用$scanf$需要加#$define$ _CRT_SECURE_NO_WARNINGS这句话,所以快读快写在$VS$中会起到非常大的作用  </li>
 </ul>
-<h1 id="最短路模板"><a href="#最短路模板" class="headerlink" title="最短路模板"></a>最短路模板</h1><hr>
+<h2 id="最短路模板"><a href="#最短路模板" class="headerlink" title="最短路模板"></a>最短路模板</h2><hr>
 <h3 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h3><p>$$O(n^3)$$</p>
 <pre><code>for (int k = 1; k &lt;= n; k++)
     for (int i = 1; i &lt;= n; i++)
@@ -820,7 +912,7 @@ for (int i = 1; i &lt;= n; i++)
                 <a href="/2019/12/17/mo-ban-zheng-he/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="模板整合">
+                        <img src="/image/1dd5a8dabcb601bd6ad5913c81e03385.jpg" class="responsive-img" alt="模板整合">
                         
                         <span class="card-title">模板整合</span>
                     </div>
@@ -828,11 +920,7 @@ for (int i = 1; i &lt;= n; i++)
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            自己认为模板在算法竞赛中还是比较重要的.它能够帮助你快速的回忆起一种算法的框架但OI的题目千变万化，模板只能做个参考  
-
-
-$tarjan$算法求强联通分量int dfn[N], low[N], scc[M], color[N];
-sta
+                            这是我整理的一些竞赛中常用的算法的模板
                         
                     </div>
                     <div class="publish-info">
@@ -873,7 +961,7 @@ sta
                 <a href="/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="动态更新的数论学习笔记">
+                        <img src="/image/0b8dfe035835bc863d6ec0aae0d003a9.jpg" class="responsive-img" alt="动态更新的数论学习笔记">
                         
                         <span class="card-title">动态更新的数论学习笔记</span>
                     </div>
@@ -881,12 +969,7 @@ sta
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数论
-
-因数
-欧几里得算法：   
-求$a,b$最大公因数$gcd(a,b)$太过简单，只给代码(llo为long\ long):        llo gcd(llo a, llo b)
-      { return b == 0 ? a
+                            数论挺有趣的，至少在qwaszx看来是这样
                         
                     </div>
                     <div class="publish-info">
@@ -984,6 +1067,100 @@ sta
 <style type="text/css">
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

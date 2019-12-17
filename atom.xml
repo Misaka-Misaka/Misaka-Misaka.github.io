@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/"/>
-  <updated>2019-12-17T07:57:32.345Z</updated>
+  <updated>2019-12-17T10:44:10.106Z</updated>
   <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/"/>
     <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/</id>
     <published>2019-12-17T07:37:00.000Z</published>
-    <updated>2019-12-17T07:57:32.345Z</updated>
+    <updated>2019-12-17T10:44:10.106Z</updated>
     
     <summary type="html">
     
@@ -32,7 +32,7 @@
           &lt;p&gt;自己认为模板在算法竞赛中还是比较重要的.&lt;br&gt;它能够帮助你快速的回忆起一种算法的框架&lt;br&gt;但OI的题目千变万化，模板只能做个参考  &lt;/p&gt;
 &lt;hr&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;tarjan-算法&quot;&gt;&lt;a href=&quot;#tarjan-算法&quot;
+&lt;h2 id=&quot;tarjan-算法&quot;&gt;&lt;a href=&quot;#tarjan-算法&quot;
         
       
     
@@ -51,7 +51,7 @@
     <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/"/>
     <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/</id>
     <published>2019-12-17T03:28:00.000Z</published>
-    <updated>2019-12-17T03:53:06.588Z</updated>
+    <updated>2019-12-17T10:36:50.746Z</updated>
     
     <summary type="html">
     
@@ -72,27 +72,6 @@
     
     
       <category term="数学" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2018/09/07/hello-world/"/>
-    <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2018/09/07/hello-world/</id>
-    <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2019-12-16T10:59:26.432Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="Markdown" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/categories/Markdown/"/>
-    
-    
-      <category term="Typora" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/Typora/"/>
-    
-      <category term="Markdown" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/Markdown/"/>
     
   </entry>
   
