@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/"/>
-  <updated>2019-12-17T03:53:06.588Z</updated>
+  <updated>2019-12-17T07:57:32.345Z</updated>
   <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模板整合</title>
+    <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/"/>
+    <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/</id>
+    <published>2019-12-17T07:37:00.000Z</published>
+    <updated>2019-12-17T07:57:32.345Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;自己认为模板在算法竞赛中还是比较重要的.&lt;br&gt;它能够帮助你快速的回忆起一种算法的框架&lt;br&gt;但OI的题目千变万化，模板只能做个参考  &lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;tarjan-算法&quot;&gt;&lt;a href=&quot;#tarjan-算法&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法竞赛" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+      <category term="笔记" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>动态更新的数论学习笔记</title>

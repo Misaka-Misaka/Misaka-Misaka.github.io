@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora-vue-theme主题介绍, Sagiri&#39;s blog">
-    <meta name="description" content="这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要">
+    <meta name="keywords" content="模板整合, Sagiri&#39;s blog">
+    <meta name="description" content="自己认为模板在算法竞赛中还是比较重要的.它能够帮助你快速的回忆起一种算法的框架但OI的题目千变万化，模板只能做个参考  
+
+
+$tarjan$算法求强联通分量int dfn[N], low[N], scc[M], color[N];
+sta">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>typora-vue-theme主题介绍 | Sagiri</title>
+    <title>模板整合 | Sagiri</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,7 +313,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
+                    <h1 class="description center-align post-title">模板整合</h1>
                 </div>
             </div>
         </div>
@@ -331,12 +335,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
-                            </a>
-                        
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -347,8 +347,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" class="post-category">
+                                算法竞赛
                             </a>
                         
                     </div>
@@ -360,28 +360,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-07
+                    2019-12-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-16
+                    2019-12-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 				
@@ -397,7 +397,192 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <p>自己认为模板在算法竞赛中还是比较重要的.<br>它能够帮助你快速的回忆起一种算法的框架<br>但OI的题目千变万化，模板只能做个参考  </p>
+<hr>
+<hr>
+<h1 id="tarjan-算法"><a href="#tarjan-算法" class="headerlink" title="$tarjan$算法"></a>$tarjan$算法</h1><h3 id="求强联通分量"><a href="#求强联通分量" class="headerlink" title="求强联通分量"></a>求强联通分量</h3><pre><code>int dfn[N], low[N], scc[M], color[N];
+stack &lt;int&gt; sta;
+int time_cnt, scc_cnt;
+void tarjan(int u) {
+    dfn[u] = low[u] = ++time_cnt, sta.push(u);
+    for (int i = hd[u]; i; i = e[i].nt) {
+        int v = e[i].to;
+        if (!dfn[v])
+            tarjan(v), low[u] = min(low[u], low[v]);
+        else if (!color[v])
+            low[u] = min(low[u], dfn[v]);
+    }
+    if (dfn[u] == low[u]) {
+        ++scc_cnt; 
+        color[u] = scc_cnt;
+        scc[scc_cnt]++;
+        while (s.top() != u) {
+            color[s.top()] = scc_cnt;
+            scc[scc_cnt]++; sta.pop();
+        } sta.pop();
+    }
+}</code></pre><hr>
+<h1 id="DP-常用模板"><a href="#DP-常用模板" class="headerlink" title="$DP$常用模板"></a>$DP$常用模板</h1><hr>
+<h3 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h3><blockquote>
+<blockquote>
+<p>$01$背包问题：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int i = 1; i &lt;= n; i++)
+    for (int j = V; j &gt;= v[i]; j--)
+        dp[j] = max(dp[j], dp[j - v[i]] + c[i]);</code></pre><blockquote>
+<blockquote>
+<p>完全背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int i = 1; i &lt;= n; i++)
+    for (int j = v[i]; j &lt;= V; j++)
+        dp[j] = max(dp[j], dp[j - v[i]] + c[i]);</code></pre><blockquote>
+<blockquote>
+<p>多重背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int i = 1; i &lt;= n; i++)
+    for (int j = V; j &gt;= v[i]; j--)
+        for (int k = 0; k &lt;= s[i]; k++)
+            dp[j] = max(dp[j], dp[j - k * v[i]] + k * c[i]);</code></pre><blockquote>
+<blockquote>
+<p>混合背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int i = 1; i &lt;= n; i++) {
+    if (p[i] == 0)
+        for (int j = v[i]; j &lt;= V; j++)
+            dp[j] = max(dp[j], dp[j - v[i]] + c[i]);
+    else
+        for (int k = 1; k &lt;= p[i]; k++)
+            for (int j = V; j &gt;= v[i]; j--)
+                dp[j] = max(dp[j], dp[j - v[i]] + c[i]);
+}</code></pre><blockquote>
+<blockquote>
+<p>二维背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int i = 1; i &lt;= n; i++)
+    for (int j = V; j &gt;= v[i]; j--)
+        for (int q = U; q &gt;= u[i]; q--)
+            dp[j][q] = max(dp[j][q], dp[j - v[i]][q - u[i]] + c[i]);</code></pre><blockquote>
+<blockquote>
+<p>分组背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>for (int k = 1; k &lt;= t; k++)
+    for (int j = V; j &gt;= v[a[k][i]]; j--)
+        for (int i = 1; i &lt;= a[k][0]; i++)
+            dp[j] = max(dp[j], dp[j - v[a[k][i]]] + c[a[k][i]]);</code></pre><blockquote>
+<blockquote>
+<p>方案背包：</p>
+</blockquote>
+</blockquote>
+<pre><code>dp[0] = 1;
+for (int i = 1; i &lt;= n; i++)
+    for (int j = v[i]; j &lt;= V; j++)
+        dp[j] += dp[j - v[i]];</code></pre><ul>
+<li>二进制优化：</li>
+</ul>
+<pre><code>    for(int i=1;i&lt;=n;i++)
+    {
+        int x,y,s,t=1;
+        scanf("%d%d%d",&amp;x,&amp;y,&amp;s);
+        while(s&gt;=t)
+        {
+            v[nl++]=x*t;c[nl]=y*t;
+            s-=t;
+            t*=2;
+        }
+        v[nl++]=x*s;c[nl]=y*s;
+    }</code></pre><hr>
+<h3 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h3><pre><code>for (int len = 2; len &lt;= n; len++)
+    for (int l = 1; l + len - 1 &lt;= n; l++) {
+        int r = l + len - 1;
+        if (j &gt; n) break;
+        for (int k = l; k &lt; r; k++)
+            dp[l][r] = max(dp[l][r], dp[l][k] + dp[k + 1][r] + w[l][r]);
+    }</code></pre><h3 id="最长不下降子序列-LIS"><a href="#最长不下降子序列-LIS" class="headerlink" title="最长不下降子序列(LIS)"></a>最长不下降子序列(LIS)</h3><pre><code>for (int i = n - 1; i &gt;= 1; i--) {
+    l = 0, k = 0;
+    for (int j = i + 1; j &lt;= n; j++)
+        if (dp[j][1] &gt; dp[i][1] &amp;&amp; dp[j][2] &gt; l)
+            l = b[j][2];
+    if (l &gt; 0) b[i][2] = l + 1;
+}
+for (int i = 1; i &lt;= n; i++)
+    maxx = max(maxx, b[i][2]);</code></pre><h1 id="快读模板"><a href="#快读模板" class="headerlink" title="快读模板"></a>快读模板</h1><hr>
+<h3 id="快读实际上就是不断读入字符，而后转化数值处理，它要比-cin-和-scanf-快很多"><a href="#快读实际上就是不断读入字符，而后转化数值处理，它要比-cin-和-scanf-快很多" class="headerlink" title="快读实际上就是不断读入字符，而后转化数值处理，它要比$cin$和$scanf$快很多"></a>快读实际上就是不断读入字符，而后转化数值处理，它要比$cin$和$scanf$快很多</h3><pre><code>inline int read() {  
+    int s = 0, f = 1;  
+    char ch = getchar();  
+    while(!isdigit(ch)) {  
+        if(ch == '-') f = -1;  
+        ch = getchar();  
+    }  
+    while(isdigit(ch)) {  
+        s = s * 10 + ch - '0';  
+        ch = getchar();  
+    }  
+    return s * f;  
+}  </code></pre><ul>
+<li><p>$isdigit$函数头文件$<cctype>$</cctype></p>
+</li>
+<li><p>这里给出读入$int$类型时的模板，实际使用要根据数据范围改变函数类型</p>
+</li>
+</ul>
+<hr>
+<h3 id="快写同理"><a href="#快写同理" class="headerlink" title="快写同理"></a>快写同理</h3><pre><code>inline void write(int x) {  
+    if(x &lt; 0) {  
+        putchar('-');  
+        x = -x;  
+    }  
+    if(x &gt; 9)  
+        write(x/10);  
+    putchar(x % 10 - '0');  
+    return;  
+}</code></pre><hr>
+<ul>
+<li>注意 在$VS$中使用$scanf$需要加#$define$ _CRT_SECURE_NO_WARNINGS这句话,所以快读快写在$VS$中会起到非常大的作用  </li>
+</ul>
+<h1 id="最短路模板"><a href="#最短路模板" class="headerlink" title="最短路模板"></a>最短路模板</h1><hr>
+<h3 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h3><p>$$O(n^3)$$</p>
+<pre><code>for (int k = 1; k &lt;= n; k++)
+    for (int i = 1; i &lt;= n; i++)
+        for (int j = 1; j &lt;= n; j++)
+            if (dis[i][j] &gt; dis[i][k] + dis[k][j])
+                dis[i][j] = dis[i][k] + dis[k][j];</code></pre><h3 id="Dijkstra-STL堆优化"><a href="#Dijkstra-STL堆优化" class="headerlink" title="Dijkstra(+STL堆优化)"></a>Dijkstra(+STL堆优化)</h3><p>$$O((n+m)logm)$$</p>
+<pre><code>void dijkstra(int start) {
+    que.push(make_pair(0, start));
+    dis[start] = 0;
+    while (!que.empty()) {
+        int tmp = que.top().second;
+        que.pop();
+        if (vis[tmp]) continue;
+        vis[tmp] = true;
+        for (int i = head[tmp]; i; i = edge[i].nxt) {
+            int v = edge[i].to, w = edge[i].dis;
+            if (!vis[v] &amp;&amp; dis[v] &gt; dis[tmp] + w)
+                dis[v] = dis[tmp] + w,
+                que.push(make_pair(-dis[v], v));
+        }
+    }
+}</code></pre><h3 id="SPFA-Bellman-Ford队列优化"><a href="#SPFA-Bellman-Ford队列优化" class="headerlink" title="SPFA(Bellman-Ford队列优化)"></a>SPFA(Bellman-Ford队列优化)</h3><p>$$O(nm)$$</p>
+<pre><code>void Spfa() {
+    queue &lt;int&gt; que;
+    dis[start] = 0;
+    que.push(start);
+    while (!que.empty()) {
+        int tmp = que.front();
+        que.pop(); vis[tmp] = false;
+        for (i = head[tmp]; ~i; i = edge[i].nxt) {
+            int v = edge[i].to, w = edge[i].dis;
+            if (dis[v] &lt; dis[tmp] + w) continue;
+            dis[v] = dis[tmp] + w;
+            if (!vis[v])
+            vis[v] = true, que.push(v);
+        }
+    }
+}</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -430,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git" rel="external nofollow noreferrer">赵奇</a>
+                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git" rel="external nofollow noreferrer">Sagiri</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -440,7 +625,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2018/09/07/hello-world/">https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2018/09/07/hello-world/</a>
+                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/">https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -453,7 +638,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git" target="_blank">赵奇</a>
+                    <a href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git" target="_blank">Sagiri</a>
                     !
                 </span>
             </div>
@@ -478,12 +663,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
-                                </a>
-                            
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -649,9 +830,63 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/12/17/mo-ban-zheng-he/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="模板整合">
+                        
+                        <span class="card-title">模板整合</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            自己认为模板在算法竞赛中还是比较重要的.它能够帮助你快速的回忆起一种算法的框架但OI的题目千变万化，模板只能做个参考  
+
+
+$tarjan$算法求强联通分量int dfn[N], low[N], scc[M], color[N];
+sta
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" class="post-category">
+                                    算法竞赛
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/">
                     <div class="card-image">
@@ -673,9 +908,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -693,59 +928,6 @@
                     
                     <a href="/tags/%E6%95%B0%E5%AD%A6/">
                         <span class="chip bg-color">数学</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2018/09/07/hello-world/">
-                    <div class="card-image">
-                        
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
-                        
-                        <span class="card-title">typora-vue-theme主题介绍</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>
@@ -825,6 +1007,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
