@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/"/>
-  <updated>2019-12-17T10:44:10.106Z</updated>
+  <updated>2019-12-18T11:05:01.073Z</updated>
   <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AC自动机总结</title>
+    <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/ac-zi-dong-ji-zong-jie/"/>
+    <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/ac-zi-dong-ji-zong-jie/</id>
+    <published>2019-12-17T07:37:00.000Z</published>
+    <updated>2019-12-18T11:05:01.073Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ac自动机是一种处理多模式串匹配的字符串算法&quot;&gt;&lt;a href=&quot;#ac自动机是一种处理多模式串匹配的字符串算法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法竞赛" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+      <category term="笔记" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="字符串" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>模板整合</title>
     <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/"/>
     <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/mo-ban-zheng-he/</id>
     <published>2019-12-17T07:37:00.000Z</published>
-    <updated>2019-12-17T10:44:10.106Z</updated>
+    <updated>2019-12-18T11:03:50.324Z</updated>
     
     <summary type="html">
     
@@ -44,6 +73,8 @@
     
       <category term="笔记" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="代码块" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/"/>
+    
   </entry>
   
   <entry>
@@ -51,7 +82,7 @@
     <link href="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/"/>
     <id>https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/2019/12/17/dong-tai-geng-xin-de-shu-lun-xue-xi-bi-ji/</id>
     <published>2019-12-17T03:28:00.000Z</published>
-    <updated>2019-12-17T10:36:50.746Z</updated>
+    <updated>2019-12-18T11:03:19.812Z</updated>
     
     <summary type="html">
     
@@ -70,6 +101,8 @@
     
       <category term="算法竞赛" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/"/>
     
+    
+      <category term="笔记" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="数学" scheme="https://github.com/Misaka-Misaka/Misaka-Misaka.github.io.git/tags/%E6%95%B0%E5%AD%A6/"/>
     
